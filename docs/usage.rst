@@ -4,7 +4,6 @@ Usage from the Zope ZMI
 The following screen shots show how to use this product through the web in
 the :term:`Zope` :term:`ZMI`. 
 
-.. contents::
 
 Adding a MemCache Proxy
 -----------------------
