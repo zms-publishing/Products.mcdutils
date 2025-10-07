@@ -129,7 +129,7 @@ class MemCacheZCacheTests(unittest.TestCase):
 
         self.assertEqual(len(_cached), 2)
         key = '%s|||' % _DUMMY_PATH_STR
-        self.assertTrue(key in _cached[_DUMMY_PATH_STR])
+        self.assertIn(key, _cached[_DUMMY_PATH_STR])
         self.assertEqual(_cached[key], 'XYZZY')
 
     def test_ZCache_set_with_view_name(self):
@@ -142,7 +142,7 @@ class MemCacheZCacheTests(unittest.TestCase):
 
         self.assertEqual(len(_cached), 2)
         key = '%s|v||' % _DUMMY_PATH_STR
-        self.assertTrue(key in _cached[_DUMMY_PATH_STR])
+        self.assertIn(key, _cached[_DUMMY_PATH_STR])
         self.assertEqual(_cached[key], 'XYZZY')
 
     def test_ZCache_set_replacing(self):
@@ -160,10 +160,10 @@ class MemCacheZCacheTests(unittest.TestCase):
 
         self.assertEqual(len(_cached), 3)
 
-        self.assertTrue(key1 in _cached[_DUMMY_PATH_STR])
+        self.assertIn(key1, _cached[_DUMMY_PATH_STR])
         self.assertEqual(_cached[key1], 'GHIJKL')
 
-        self.assertTrue(key2 in _cached[_DUMMY_PATH_STR])
+        self.assertIn(key2, _cached[_DUMMY_PATH_STR])
         self.assertEqual(_cached[key2], 'XYZZY')
 
 

@@ -75,9 +75,9 @@ class MemCacheSessionDataTests(unittest.TestCase):
         from transaction.interfaces import IDataManager
         sdc = self._makeOne('mcsdc')
         created = sdc.new_or_existing('foobar')
-        self.assertTrue(isinstance(created, PersistentMapping))
+        self.assertIsInstance(created, PersistentMapping)
         jar = created._p_jar
-        self.assertFalse(jar is None)
+        self.assertIsNotNone(jar)
         self.assertTrue(IDataManager.providedBy(jar))
 
     def test_has_key_after_new_or_existing_returns_True(self):
@@ -88,4 +88,4 @@ class MemCacheSessionDataTests(unittest.TestCase):
     def test_get_after_new_or_existing_returns_same(self):
         sdc = self._makeOne('mcsdc')
         created = sdc.new_or_existing('foobar')
-        self.assertTrue(sdc.get('foobar') is created)
+        self.assertIs(sdc.get('foobar'), created)
