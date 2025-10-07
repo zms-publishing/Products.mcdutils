@@ -4,6 +4,12 @@ Change log
 4.3 (unreleased)
 ----------------
 
+- Drop support for Python 3.7 and 3.8.
+
+- Add support for Python 3.13.
+
+- Update package management files from latest ``zope.meta`` templates.
+
 
 4.2 (2023-12-28)
 ----------------

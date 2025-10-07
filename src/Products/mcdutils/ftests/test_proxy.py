@@ -30,7 +30,7 @@ class MemCacheSDCFuncTests(unittest.TestCase):
 
         sdc = self._makeOne()
         mapping = sdc.new_or_existing('foobar')
-        self.assertTrue(isinstance(mapping, MemCacheMapping))
+        self.assertIsInstance(mapping, MemCacheMapping)
         self.assertFalse(mapping._p_changed)
         self.assertFalse(mapping._p_joined)
         mapping['abc'] = 1345
@@ -45,7 +45,7 @@ class MemCacheSDCFuncTests(unittest.TestCase):
         sdc = self._makeOne()
         sdc._get_proxy().servers = ('localhost:11211',)
         mapping = sdc.new_or_existing('foobar')
-        self.assertTrue(isinstance(mapping, MemCacheMapping))
+        self.assertIsInstance(mapping, MemCacheMapping)
         self.assertFalse(mapping._p_changed)
         self.assertTrue(mapping._p_joined)
         mapping['abc'] = 1345
