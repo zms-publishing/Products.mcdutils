@@ -25,12 +25,15 @@ known_third_party = "memcache, six"
 additional-ignores = [
     "docs/_build/html/_images/*",
     "docs/_build/html/_static/*",
+    "docs/_build/html/_static/scripts/*",
     ]
 
 [manifest]
 additional-rules = [
     "include *.yaml",
     "include *.txt",
-    "recursive-include docs *.png",
+    "include docs/*.png",
+    "include docs/requirements.txt",
+    "include docs/_static/README.txt",
     "recursive-include src *.pt",
     ]
