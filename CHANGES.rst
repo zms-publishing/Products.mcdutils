@@ -4,6 +4,9 @@ Change log
 4.4 (unreleased)
 ----------------
 
+- Pruned ``setup.py`` to the smallest stub currently possible and moved
+  all package data into ``pyproject.toml``.
+
 
 4.3 (2025-10-07)
 ----------------
