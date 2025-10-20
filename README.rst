@@ -22,7 +22,7 @@
 ===================
 
 The `Products.mcdutils` product supplies a replacement for the ZODB-based
-session data container supplied by the `Transience` product, shipped with
+session data container from the `Transience` product, shipped with
 the Zope core prior to Zope 4 and available as a separate package after that.
 Rather than using a ZODB storage as the backing store for session data, as
 `Transience` does, `Products.mcdutils` stores session data in a cluster of

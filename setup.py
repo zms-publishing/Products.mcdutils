@@ -15,6 +15,8 @@ from setuptools import find_packages
 from setuptools import setup
 
 
+# Namespace discovery configuration must remain here until the package uses
+# a PEP 420-style native namespace.
 setup(name='Products.mcdutils',
       packages=find_packages('src'),
       package_dir={'': 'src'},
