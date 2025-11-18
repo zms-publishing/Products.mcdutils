@@ -4,6 +4,10 @@ Change log
 4.4 (unreleased)
 ----------------
 
+- Add support for Python 3.14.
+
+- Drop support for Python 3.9.
+
 - Pruned ``setup.py`` to the smallest stub currently possible and moved
   all package data into ``pyproject.toml``.
 
