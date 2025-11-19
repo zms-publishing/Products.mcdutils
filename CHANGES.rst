@@ -1,8 +1,10 @@
 Change log
 ==========
 
-4.4 (unreleased)
+5.0 (unreleased)
 ----------------
+
+- Convert to PEP 420-style namespace package.
 
 - Add support for Python 3.14.
 

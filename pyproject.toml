@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "Products.mcdutils"
-version = "4.4.dev0"
+version = "5.0"
 description = """\
   A Zope product with memcached-backed ZCache and Zope \
   session implementations.\
