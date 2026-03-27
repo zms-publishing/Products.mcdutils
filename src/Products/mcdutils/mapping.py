@@ -65,8 +65,9 @@ class MemCacheMapping(PersistentMapping):
         # Overriding here to try and hide some password fields, like
         # the ZPublisher HTTPRequest class tries to do.
         new_dict = dict(self.data)
-        for key in new_dict.keys():
-            if 'passw' in key.lower():
+        for key in list(new_dict.keys()):
+            k_str = key.decode('utf-8', 'ignore') if isinstance(key, bytes) else str(key)
+            if 'passw' in k_str.lower():
                 new_dict[key] = '<password obscured>'
         return repr(new_dict)
 
