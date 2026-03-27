@@ -74,10 +74,10 @@ class MemCacheMapping(PersistentMapping):
             lower_key = k_str.lower()
             if any(
                 marker in lower_key for marker in (
-                    'passw', 
-                    'pwd', 
-                    'secret', 
-                    'token', 
+                    'passw',
+                    'pwd',
+                    'secret',
+                    'token',
                     'cred')):
                 new_dict[key] = '<password obscured>'
         return repr(new_dict)
