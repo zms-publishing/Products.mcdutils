@@ -66,8 +66,9 @@ class MemCacheMapping(PersistentMapping):
         # the ZPublisher HTTPRequest class tries to do.
         new_dict = dict(self.data)
         for key in list(new_dict.keys()):
-            k_str = key.decode('utf-8', 'ignore') if isinstance(key, bytes) else str(key)
-            if 'passw' in k_str.lower():
+            k_str = key.decode('utf-8', 'replace') if isinstance(key, bytes) else str(key)
+            lower_key = k_str.lower()
+            if any(marker in lower_key for marker in ('passw', 'pwd', 'secret', 'token', 'cred')):
                 new_dict[key] = '<password obscured>'
         return repr(new_dict)
 
